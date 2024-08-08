@@ -332,34 +332,22 @@
               <h3>Next Of Kin</h3>
               <div class="mb-3">
                 <label for="nextOfKinName" class="form-label"
-                  >Name of Next of Kin</label
+                  >Next Of Kin Name</label
                 >
                 <input
                   type="text"
                   class="form-control"
                   id="nextOfKinName"
-                  placeholder="Full Name"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="nextOfKinState" class="form-label"
-                  >State of Residence (Kin)</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nextOfKinState"
-                  placeholder="State"
+                  placeholder="Next of Kin Name"
                   required
                 />
               </div>
               <div class="mb-3">
                 <label for="nextOfKinPhone" class="form-label"
-                  >Phone Number</label
+                  >Next Of Kin Phone Number</label
                 >
                 <input
-                  type="text"
+                  type="tel"
                   class="form-control"
                   id="nextOfKinPhone"
                   placeholder="Phone Number"
@@ -368,13 +356,25 @@
               </div>
               <div class="mb-3">
                 <label for="nextOfKinEmail" class="form-label"
-                  >Email Address</label
+                  >Next Of Kin Email Address</label
                 >
                 <input
                   type="email"
                   class="form-control"
                   id="nextOfKinEmail"
-                  placeholder="Email"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="nextOfKinAddress" class="form-label"
+                  >Next Of Kin Address</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nextOfKinAddress"
+                  placeholder="Address"
                   required
                 />
               </div>
@@ -384,60 +384,42 @@
               </div>
             </div>
 
-            <!-- Step 4: Guarantor Details -->
+            <!-- Step 4: Contact Details -->
             <div class="form-step">
-              <h3>Guarantor Details</h3>
+              <h3>Contact Details</h3>
               <div class="mb-3">
-                <label for="guarantorName" class="form-label"
-                  >Name of Guarantor</label
-                >
+                <label for="address" class="form-label">Home Address</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="guarantorName"
-                  placeholder="Full Name"
+                  id="address"
+                  placeholder="Address"
                   required
                 />
               </div>
               <div class="mb-3">
-                <label for="guarantorState" class="form-label"
-                  >State of Residence (Guarantor)</label
-                >
+                <label for="phone" class="form-label">Phone Number</label>
                 <input
-                  type="text"
+                  type="tel"
                   class="form-control"
-                  id="guarantorState"
-                  placeholder="State"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="guarantorPhone" class="form-label"
-                  >Phone Number</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="guarantorPhone"
+                  id="phone"
                   placeholder="Phone Number"
                   required
                 />
               </div>
               <div class="mb-3">
-                <label for="guarantorEmail" class="form-label"
-                  >Email Address</label
-                >
+                <label for="email" class="form-label">Email Address</label>
                 <input
                   type="email"
                   class="form-control"
-                  id="guarantorEmail"
-                  placeholder="Email"
+                  id="email"
+                  placeholder="Email Address"
                   required
                 />
               </div>
               <div class="btn-group">
                 <button type="button" class="btn btn-prev">Previous</button>
-                <button type="submit" class="btn btn-submit">Submit</button>
+                <button type="button" class="btn btn-submit">Submit</button>
               </div>
             </div>
           </form>
@@ -454,6 +436,8 @@
           if (uniqueId) {
             document.getElementById("uniqueIdPage").style.display = "none";
             document.getElementById("registrationForm").style.display = "block";
+            currentStep = 0; // Set to the first step of the multi-step form
+            showStep(currentStep); // Show the first step
           } else {
             alert("Please enter a valid Unique ID.");
           }
