@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenqeeth Training Registration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #69c066;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      .card {
+        border: none;
+        border-radius: 8px;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .form-step {
+        display: none;
+      }
+
+      .form-step.active {
+        display: block;
+      }
+
+      .form-control {
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .form-control:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      .form-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s;
+      }
+
+      .btn-next {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      .btn-next:hover {
+        background-color: #0056b3;
+      }
+
+      .btn-prev {
+        background-color: #6c757d;
+        color: #fff;
+      }
+
+      .btn-prev:hover {
+        background-color: #5a6268;
+      }
+
+      .btn-submit {
+        background-color: #28a745;
+        color: #fff;
+      }
+
+      .btn-submit:hover {
+        background-color: #218838;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .card-title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .mb-3 {
+        margin-bottom: 15px;
+      }
+
+      .form-step h3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .form-step .btn-group {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Unique ID Verification Page -->
+    <div class="container" id="uniqueIdPage">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Enter Your Unique ID</h2>
+          <form id="uniqueIdForm">
+            <div class="mb-3">
+              <label for="uniqueId" class="form-label">Unique ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="uniqueId"
+                name="uniqueId"
+                placeholder="Enter Unique ID"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-next">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-Step Form -->
+    <div class="container" id="registrationForm" style="display: none">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Zenqeeth Training Registration</h2>
+          <form id="multiStepForm">
+            <!-- Step 1: Registration Page -->
+            <div class="form-step active">
+              <h3>Registration Page</h3>
+              <div class="mb-3">
+                <label for="surname" class="form-label">Surname</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="surname"
+                  placeholder="Abdullah"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="middlename" class="form-label">Middlename</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="middlename"
+                  placeholder="Middle"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="lastname" class="form-label">Lastname</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  placeholder="Usaym"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="username"
+                  placeholder="Mohammad@_.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="confirmUsername" class="form-label"
+                  >Confirm Username</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="confirmUsername"
+                  placeholder="Mohammad@_.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="**********"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmPassword"
+                  placeholder="**********"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Gender</label><br />
+                <input
+                  type="radio"
+                  name="Gender"
+                  value="Male"
+                  id="genderMale"
+                />
+                <label for="genderMale">Male</label>
+                <input
+                  type="radio"
+                  name="Gender"
+                  value="Female"
+                  id="genderFemale"
+                />
+                <label for="genderFemale">Female</label>
+              </div>
+              <div class="mb-3">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-next">Next</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Academic Qualification -->
+            <div class="form-step">
+              <h3>Academic Qualification</h3>
+              <div class="mb-3">
+                <label for="qualification" class="form-label"
+                  >Highest Qualification</label
+                >
+                <select
+                  class="form-control"
+                  id="qualification"
+                  name="AcademicQualification"
+                >
+                  <option value="University">University</option>
+                  <option value="HND">Higher National Diploma (HND)</option>
+                  <option value="ND">National Diploma (ND)</option>
+                  <option value="SSSCE">
+                    Senior Secondary School Certificate (SSSCE)
+                  </option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="certificate" class="form-label"
+                  >Upload Certificate</label
+                >
+                <input
+                  type="file"
+                  class="form-control"
+                  id="certificate"
+                  name="Certificate"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="yearEntry" class="form-label">Year of Entry</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="yearEntry"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="yearGrad" class="form-label"
+                  >Year of Graduation</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="yearGrad"
+                  required
+                />
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-prev">Previous</button>
+                <button type="button" class="btn btn-next">Next</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Next of Kin -->
+            <div class="form-step">
+              <h3>Next Of Kin</h3>
+              <div class="mb-3">
+                <label for="nextOfKinName" class="form-label"
+                  >Name of Next of Kin</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nextOfKinName"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="nextOfKinState" class="form-label"
+                  >State of Residence (Kin)</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nextOfKinState"
+                  placeholder="State"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="nextOfKinPhone" class="form-label"
+                  >Phone Number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nextOfKinPhone"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="nextOfKinEmail" class="form-label"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="nextOfKinEmail"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-prev">Previous</button>
+                <button type="button" class="btn btn-next">Next</button>
+              </div>
+            </div>
+
+            <!-- Step 4: Guarantor Details -->
+            <div class="form-step">
+              <h3>Guarantor Details</h3>
+              <div class="mb-3">
+                <label for="guarantorName" class="form-label"
+                  >Name of Guarantor</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="guarantorName"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="guarantorState" class="form-label"
+                  >State of Residence (Guarantor)</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="guarantorState"
+                  placeholder="State"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="guarantorPhone" class="form-label"
+                  >Phone Number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="guarantorPhone"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="guarantorEmail" class="form-label"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="guarantorEmail"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-prev">Previous</button>
+                <button type="submit" class="btn btn-submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("uniqueIdForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const uniqueId = document.getElementById("uniqueId").value;
+          if (uniqueId) {
+            document.getElementById("uniqueIdPage").style.display = "none";
+            document.getElementById("registrationForm").style.display = "block";
+          } else {
+            alert("Please enter a valid Unique ID.");
+          }
+        });
+
+      const steps = document.querySelectorAll(".form-step");
+      const nextBtns = document.querySelectorAll(".btn-next");
+      const prevBtns = document.querySelectorAll(".btn-prev");
+
+      let currentStep = 0;
+
+      function showStep(step) {
+        steps.forEach((stepElem, index) => {
+          stepElem.classList.toggle("active", index === step);
+        });
+        prevBtns.forEach(
+          (btn) => (btn.style.display = step === 0 ? "none" : "inline-block")
+        );
+        nextBtns.forEach(
+          (btn) =>
+            (btn.style.display =
+              step === steps.length - 1 ? "none" : "inline-block")
+        );
+      }
+
+      nextBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (currentStep < steps.length - 1) {
+            currentStep++;
+            showStep(currentStep);
+          }
+        });
+      });
+
+      prevBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (currentStep > 0) {
+            currentStep--;
+            showStep(currentStep);
+          }
+        });
+      });
+
+      document
+        .getElementById("multiStepForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Form Submitted Successfully!");
+        });
+
+      showStep(currentStep);
+    </script>
+  </body>
+</html>
