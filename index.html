@@ -11,308 +11,313 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Logos -->
+    <!-- Container for Logos and Form -->
     <div class="container text-center my-4">
-      <img src="zen fin-01.jpg" alt="Left Logo" class="logo logo-left" />
-      <img src="zen fin-01.jpg" alt="Right Logo" class="logo logo-right" />
-    </div>
+      <!-- Logos -->
+      <div class="mb-4">
+        <img src="zen fin-01.jpg" alt="Left Logo" class="logo logo-left" />
+        <img src="zen fin-01.jpg" alt="Right Logo" class="logo logo-right" />
+      </div>
 
-    <!-- Unique ID Verification Page -->
-    <div class="container" id="uniqueIdPage">
-      <div class="card mx-auto" style="max-width: 600px">
-        <div class="card-body">
-          <h2 class="card-title">Enter Your Unique ID</h2>
-          <form id="uniqueIdForm">
-            <div class="form-group">
-              <label for="uniqueId">Unique ID</label>
-              <input
-                type="text"
-                class="form-control"
-                id="uniqueId"
-                name="uniqueId"
-                placeholder="Enter Unique ID"
-                required
-              />
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">
-              Submit
-            </button>
-          </form>
+      <!-- Unique ID Verification Page -->
+      <div id="uniqueIdPage">
+        <div class="card mx-auto" style="max-width: 600px">
+          <div class="card-body">
+            <h2 class="card-title">Enter Your Unique ID</h2>
+            <form id="uniqueIdForm">
+              <div class="form-group">
+                <label for="uniqueId">Unique ID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="uniqueId"
+                  name="uniqueId"
+                  placeholder="Enter Unique ID"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Multi-Step Form -->
-    <div class="container" id="registrationForm" style="display: none">
-      <div class="card mx-auto" style="max-width: 800px">
-        <div class="card-body">
-          <h2 class="card-title">Zenqeeth Training Registration</h2>
-          <form id="multiStepForm">
-            <!-- Step 1: Personal Information -->
-            <div class="form-step active">
-              <h3>Personal Information</h3>
-              <div class="form-group">
-                <label for="surname">Surname</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="surname"
-                  placeholder="Abdullah"
-                  required
-                />
+      <!-- Multi-Step Form -->
+      <div id="registrationForm" style="display: none">
+        <div class="card mx-auto" style="max-width: 800px">
+          <div class="card-body">
+            <h2 class="card-title">Zenqeeth Training Registration</h2>
+            <form id="multiStepForm">
+              <!-- Step 1: Personal Information -->
+              <div class="form-step active">
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                  <label for="surname">Surname</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="surname"
+                    placeholder="Abdullah"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="middlename">Middlename</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="middlename"
+                    placeholder="Middle"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastname">Lastname</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastname"
+                    placeholder="Usaym"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="username"
+                    placeholder="Mohammad@_.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="confirmUsername">Confirm Username</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="confirmUsername"
+                    placeholder="Mohammad@_.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="**********"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirmPassword"
+                    placeholder="**********"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Gender</label><br />
+                  <input
+                    type="radio"
+                    name="Gender"
+                    value="Male"
+                    id="genderMale"
+                  />
+                  <label for="genderMale">Male</label>
+                  <input
+                    type="radio"
+                    name="Gender"
+                    value="Female"
+                    id="genderFemale"
+                  />
+                  <label for="genderFemale">Female</label>
+                </div>
+                <div class="form-group">
+                  <label for="dob">Date of Birth</label>
+                  <input type="date" class="form-control" id="dob" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="btn-group d-flex justify-content-between">
+                  <button type="button" class="btn btn-primary btn-next">
+                    Next
+                  </button>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="middlename">Middlename</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="middlename"
-                  placeholder="Middle"
-                />
-              </div>
-              <div class="form-group">
-                <label for="lastname">Lastname</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="lastname"
-                  placeholder="Usaym"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="username">Username</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="username"
-                  placeholder="Mohammad@_.com"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="confirmUsername">Confirm Username</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="confirmUsername"
-                  placeholder="Mohammad@_.com"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="**********"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="confirmPassword"
-                  placeholder="**********"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Gender</label><br />
-                <input
-                  type="radio"
-                  name="Gender"
-                  value="Male"
-                  id="genderMale"
-                />
-                <label for="genderMale">Male</label>
-                <input
-                  type="radio"
-                  name="Gender"
-                  value="Female"
-                  id="genderFemale"
-                />
-                <label for="genderFemale">Female</label>
-              </div>
-              <div class="form-group">
-                <label for="dob">Date of Birth</label>
-                <input type="date" class="form-control" id="dob" />
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-              <div class="btn-group d-flex justify-content-between">
-                <button type="button" class="btn btn-primary btn-next">
-                  Next
-                </button>
-              </div>
-            </div>
 
-            <!-- Step 2: Academic Qualification -->
-            <div class="form-step">
-              <h3>Academic Qualification</h3>
-              <div class="form-group">
-                <label for="qualification">Highest Qualification</label>
-                <select
-                  class="form-control"
-                  id="qualification"
-                  name="AcademicQualification"
-                >
-                  <option value="University">University</option>
-                  <option value="HND">Higher National Diploma (HND)</option>
-                  <option value="ND">National Diploma (ND)</option>
-                  <option value="SSSCE">
-                    Senior Secondary School Certificate (SSSCE)
-                  </option>
-                </select>
+              <!-- Step 2: Academic Qualification -->
+              <div class="form-step">
+                <h3>Academic Qualification</h3>
+                <div class="form-group">
+                  <label for="qualification">Highest Qualification</label>
+                  <select
+                    class="form-control"
+                    id="qualification"
+                    name="AcademicQualification"
+                  >
+                    <option value="University">University</option>
+                    <option value="HND">Higher National Diploma (HND)</option>
+                    <option value="ND">National Diploma (ND)</option>
+                    <option value="SSSCE">
+                      Senior Secondary School Certificate (SSSCE)
+                    </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="certificate">Upload Certificate</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="certificate"
+                    name="Certificate"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="yearEntry">Year of Entry</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="yearEntry"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="yearCompletion">Year of Completion</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="yearCompletion"
+                    required
+                  />
+                </div>
+                <div class="btn-group d-flex justify-content-between">
+                  <button type="button" class="btn btn-secondary btn-prev">
+                    Previous
+                  </button>
+                  <button type="button" class="btn btn-primary btn-next">
+                    Next
+                  </button>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="certificate">Upload Certificate</label>
-                <input
-                  type="file"
-                  class="form-control"
-                  id="certificate"
-                  name="Certificate"
-                />
-              </div>
-              <div class="form-group">
-                <label for="yearEntry">Year of Entry</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  id="yearEntry"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="yearCompletion">Year of Completion</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  id="yearCompletion"
-                  required
-                />
-              </div>
-              <div class="btn-group d-flex justify-content-between">
-                <button type="button" class="btn btn-secondary btn-prev">
-                  Previous
-                </button>
-                <button type="button" class="btn btn-primary btn-next">
-                  Next
-                </button>
-              </div>
-            </div>
 
-            <!-- Step 3: Employment Information -->
-            <div class="form-step">
-              <h3>Employment Information</h3>
-              <div class="form-group">
-                <label for="employmentStatus">Employment Status</label>
-                <select
-                  class="form-control"
-                  id="employmentStatus"
-                  name="EmploymentStatus"
-                >
-                  <option value="Employed">Employed</option>
-                  <option value="Unemployed">Unemployed</option>
-                  <option value="Self-Employed">Self-Employed</option>
-                </select>
+              <!-- Step 3: Employment Information -->
+              <div class="form-step">
+                <h3>Employment Information</h3>
+                <div class="form-group">
+                  <label for="employmentStatus">Employment Status</label>
+                  <select
+                    class="form-control"
+                    id="employmentStatus"
+                    name="EmploymentStatus"
+                  >
+                    <option value="Employed">Employed</option>
+                    <option value="Unemployed">Unemployed</option>
+                    <option value="Self-Employed">Self-Employed</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="companyName">Company Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="companyName"
+                    placeholder="Company Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="jobTitle">Job Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jobTitle"
+                    placeholder="Job Title"
+                  />
+                </div>
+                <div class="btn-group d-flex justify-content-between">
+                  <button type="button" class="btn btn-secondary btn-prev">
+                    Previous
+                  </button>
+                  <button type="button" class="btn btn-primary btn-next">
+                    Next
+                  </button>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="companyName">Company Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="companyName"
-                  placeholder="Company Name"
-                />
-              </div>
-              <div class="form-group">
-                <label for="jobTitle">Job Title</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="jobTitle"
-                  placeholder="Job Title"
-                />
-              </div>
-              <div class="btn-group d-flex justify-content-between">
-                <button type="button" class="btn btn-secondary btn-prev">
-                  Previous
-                </button>
-                <button type="button" class="btn btn-primary btn-next">
-                  Next
-                </button>
-              </div>
-            </div>
 
-            <!-- Step 4: Guarantor Details -->
-            <div class="form-step">
-              <h3>Guarantor Details</h3>
-              <div class="form-group">
-                <label for="guarantorName">Guarantor's Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="guarantorName"
-                  placeholder="Guarantor's Name"
-                />
+              <!-- Step 4: Guarantor Details -->
+              <div class="form-step">
+                <h3>Guarantor Details</h3>
+                <div class="form-group">
+                  <label for="guarantorName">Guarantor's Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="guarantorName"
+                    placeholder="Guarantor's Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="guarantorEmail">Guarantor's Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="guarantorEmail"
+                    placeholder="Guarantor's Email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="guarantorContact"
+                    >Guarantor's Contact Number</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="guarantorContact"
+                    placeholder="Guarantor's Contact Number"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="guarantorPassport">Guarantor's Passport</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="guarantorPassport"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="securityCode">Zenqeeth Security Code</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="securityCode"
+                    placeholder="Security Code"
+                  />
+                </div>
+                <div class="btn-group d-flex justify-content-between">
+                  <button type="button" class="btn btn-secondary btn-prev">
+                    Previous
+                  </button>
+                  <button type="submit" class="btn btn-success btn-submit">
+                    Submit
+                  </button>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="guarantorEmail">Guarantor's Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="guarantorEmail"
-                  placeholder="Guarantor's Email"
-                />
-              </div>
-              <div class="form-group">
-                <label for="guarantorContact">Guarantor's Contact Number</label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="guarantorContact"
-                  placeholder="Guarantor's Contact Number"
-                />
-              </div>
-              <div class="form-group">
-                <label for="guarantorPassport">Guarantor's Passport</label>
-                <input
-                  type="file"
-                  class="form-control"
-                  id="guarantorPassport"
-                />
-              </div>
-              <div class="form-group">
-                <label for="securityCode">Zenqeeth Security Code</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="securityCode"
-                  placeholder="Security Code"
-                />
-              </div>
-              <div class="btn-group d-flex justify-content-between">
-                <button type="button" class="btn btn-secondary btn-prev">
-                  Previous
-                </button>
-                <button type="submit" class="btn btn-success btn-submit">
-                  Submit
-                </button>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
