@@ -43,7 +43,7 @@ body {
 /* Adjust footer for mobile view */
 @media (max-width: 576px) {
   .footer {
-    padding: 5px 0; /* Reduce padding */
+    padding: 2px 0; /* Reduce padding */
     font-size: 0.8rem; /* Reduce font size */
   }
 }
