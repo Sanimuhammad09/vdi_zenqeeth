@@ -29,6 +29,7 @@ body {
 }
 
 /* Footer styling */
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -37,6 +38,14 @@ body {
   color: white;
   text-align: center;
   padding: 10px 0;
+}
+
+/* Adjust footer for mobile view */
+@media (max-width: 576px) {
+  .footer {
+    padding: 5px 0; /* Reduce padding */
+    font-size: 0.8rem; /* Reduce font size */
+  }
 }
 
 /* Style for form steps */
