@@ -57,10 +57,27 @@ body {
   .btn-group {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .btn-group .btn {
     margin: 5px 0;
+    width: 100%; /* Ensure the button takes full width on small screens */
+  }
+
+  .btn-next {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .btn-prev {
+    background-color: #6c757d;
+    color: #fff;
+  }
+
+  .btn-submit {
+    background-color: #28a745;
+    color: #fff;
   }
 }
 
